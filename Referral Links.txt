@@ -1,0 +1,40 @@
+Radar Plot:
+
+https://matplotlib.org/examples/api/radar_chart.html
+
+Outliers discussion:
+
+http://www.theanalysisfactor.com/outliers-to-drop-or-not-to-drop/
+http://graphpad.com/guides/prism/6/statistics/index.htm?stat_checklist_identifying_outliers.html
+
+
+# Heatmap using percentiles to display outlier data
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+percentiles = data.rank(pct=True)
+percentiles = percentiles.iloc[[65, 66, 75, 128, 154]]
+plt.title('Multiple Outliers Heatmap', fontsize=14)
+heat = sns.heatmap(percentiles, annot=True)
+display(heat)
+
+
+Interpret PCA results:
+
+
+https://onlinecourses.science.psu.edu/stat505/node/54
+http://webspace.ship.edu/pgmarr/Geo441/Lectures/Lec%2017%20-%20Principal%20Component%20Analysis.pdf
+
+
+Silhouette Plot:
+
+http://scikit-learn.org/stable/auto_examples/cluster/plot_kmeans_silhouette_analysis.html
+
+
+A/B testing:
+
+https://en.wikipedia.org/wiki/A/B_testing#Segmentation_and_targeting
+https://stats.stackexchange.com/questions/192752/clustering-and-a-b-testing
+
+
+
