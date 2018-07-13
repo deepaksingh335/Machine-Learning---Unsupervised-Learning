@@ -13409,10 +13409,10 @@ The below data points are outliers in multiple features:
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <p>The first two principal components explain nearly 74% of the variance. We get up to nearly 93% of the variance explained with the first four principal components.</p>
-<p>Similarly to what I noticed earlier, the most variance is explained in the first principal componenet with Detergents_Paper, Grocery, and Milk, all of which have fairly positive weights.</p>
-<p>The second principal component focuses on the other three dimensions, with heavy positive weights on Fresh, Frozen, and Delicatessen, with very little weight to the three features in the first PC.</p>
-<p>The third principal component seems to indicate that a large portion of the variance is actually explained by giving a negative weight to Fresh and a positive weight to Delicatessen, with smaller effects from the others (besides Grocery, which is almost completely disregarded in this principal component).</p>
-<p>The fourth principal component, most of the variance is explained using Frozen, Delicatessen and Detergents_Paper</p>
+<p>Similarly to what I noticed earlier, the most variance is explained in the first principal componenet with Detergents_Paper, Grocery, and Milk, all of which have fairly positive weights.So maybe this component could represent retail spending.</p>
+<p>The second principal component focuses on the other three dimensions, with heavy positive weights on Fresh, Frozen, and Delicatessen, with very little weight to the three features in the first PC. Since most of the spending is on Fresh, Frozen and Delicatessen, it seems to be a cafe/deli spending</p>
+<p>The third principal component seems to indicate that a large portion of the variance is actually explained by giving a negative weight to Fresh and a positive weight to Delicatessen, with smaller effects from the others (besides Grocery, which is almost completely disregarded in this principal component). This type of spending - negative weights on Fresh and positive weights on Frozen, milk and Delicatessen seems to be a hotel or a cafe</p>
+<p>The fourth principal component, most of the variance is explained using Frozen, Delicatessen and Detergents_Paper. This spending seems to be on fresh food market with low on frozen and deterget_paper and high on Delicatessen with positive weights for fresh, milk and grocery products</p>
 
 </div>
 </div>
@@ -13735,7 +13735,7 @@ The below data points are outliers in multiple features:
 <p><strong>Answer:</strong></p>
 <p>K-Means clustering is faster compared to other clustering techniques, more efficient, and does a good job when the distinction between clusters is fairly well defined (meaning overlapping clusters could cause issues). It would typically get hurt by outliers and noise, although I did at least remove most outliers already. K-Means does well with spherical clusters.</p>
 <p>Gaussian Mixture Model clustering does a better job with mixing in a little uncertainty (compared to K-Means doing better with more clearly split clusters). This can also handle clusters outside of just a spherical shape better than K-Means.</p>
-<p>I think the Gaussian Mixture is going to work better - in the above plot, there does not seem to be very distinct clustering along the two principal components used. Since I don't already know the numbers of clusters, I think GMM will work better.</p>
+<p>I think the Gaussian Mixture is going to work better - in the above plot, there does not seem to be very distinct clustering along the two principal components used. Also, the data cluster do not seem to spherical in shape so GMM could be better in this senario.</p>
 
 </div>
 </div>
